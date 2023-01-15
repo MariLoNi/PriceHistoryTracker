@@ -1,0 +1,29 @@
+<html lang="EN">
+  <head>
+    <title>Price tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="history.js"></script>
+  </head>
+
+  <body>
+    <h1>Add link to tracking</h1>
+    <form action="/api/v1/url/add" method="POST" target="hiddenFrame">
+      <label for="addUrl">Url:</label><br>
+      <input type="text" id="addUrl" name="url"><br>
+      <button>Add url to tracking</button>
+    </form>
+
+    <h1>Show history for tracked url</h1>
+<!--    TODO draw history charts-->
+<!--    <form action="/api/v1/url/get" method="GET" target="hiddenFrame" onsubmit="">-->
+<!--      <label for="getUrl"></label>-->
+<!--      <input type="text" id="getUrl" name="url"><br>-->
+<!--      <button>Get history</button>-->
+<!--    </form>-->
+
+    <canvas id="historyChart" style="width:100%;max-width:700px"></canvas>
+  </body>
+</html>
+
+
+<iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
